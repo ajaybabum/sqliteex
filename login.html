@@ -1,0 +1,31 @@
+<div id="container">
+    	 
+	  	<header class="toolbar toolbar-header">
+  <h1 class="title">LogIn Page</h1>
+</header>      
+             <form name="loginForm" novalidate>        
+                 <div class="form-group"> 
+                 <label><span class="icon icon-mail"></span>E-mail :</label>
+                     <input type="email" name="email" value="" id="email" ng-model="login.email" class="form-control" placeholder="E-mail" size="20" required/><span ng-show="loginForm.$dirty && loginForm.email.$error.required">Email is required</span>             
+                    
+                    </div>
+                    <div class="form-group">
+                    <label><span class="icon icon-key"></span>Password: </label>
+                         <input type="password" name="password" value="" id="password" ng-model="login.password" class="form-control" placeholder="Password" size="20" required/><span ng-show="loginForm.$dirty && loginForm.password.$error.required">password is required</span>
+                    </div>
+                       
+                    <div class="form-actions">
+                         <div>
+                            <button type="submit" ng-click="check(login)" class="btn btn-primary" value="Login" ng-disabled="loginForm.$invalid">login</button>
+                            <a href="#registration"><button type="submit" class="btn btn-primary" value="Register">Register</button></a>
+                            <a href="#reset">Reset password?</a>
+                         </div>
+                    </div>
+            </form>
+
+    <footer class="toolbar toolbar-footer">
+  <h1 class="title">&copy PiSoft Technologies</h1>
+</footer>
+  </div>
+</body>
+</html>
